@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>API ViaCEP</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+
+            <div class="header">
+                <h1>WebService de CEP</h1>
+                <p>Eu desenvolvi a aplicação para simular uma página de cadastro. A busca do endereço é realizada
+                    automaticamente após o usuário digitar o CEP.
+                    Implementei validações para impedir a digitação de um CEP inexistente, além da verificação dos
+                    campos ao
+                    realizar o submit do formulário.
+                </p>
+
+                <p class="links-know-more">Alguns dos elementos utilizados:</p>
+                <ul>
+                    <li><a target="_blank" href="https://viacep.com.br">API: viaCEP</a></li>
+                    <li><a target="_blank"
+                            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">Elemento Dialog</a>
+                    </li>
+                    <li><a target="_blank"
+                            href="https://developer.mozilla.org/en-US/docs/Web/API/Element/keyup_event">Keyup Event</a>
+                    </li>
+            </div>
+
+            <div>
+                <form>
+                    <div class="media-query-two-inputs">
+                        <div class="input-e-label">
+                            <label for="name">Nome</label>
+                            <input class="form-input" type="text" id="name" required placeholder="Nome completo">
+                        </div>
+
+                        <div class="input-e-label">
+                            <label for="email">E-mail</label>
+                            <input class="form-input" type="email" id="email" required placeholder="Seu e-mail">
+
+                        </div>
+                    </div>
+
+                    <div class="media-query-two-inputs">
+                        <div class="input-e-label">
+                            <label for="cep">CEP </label>
+                            <input class="form-input" type="text" id="cep" required placeholder="Somente números"
+                                pattern="\d*" minlength="8" maxlength="8" autocomplete="off">
+                        </div>
+
+                        <div class="input-e-label">
+                            <label for="address">Endereço</label>
+                            <input class="form-input" type="text" name="address" id="address" required placeholder=""
+                                readonly>
+                        </div>
+                    </div>
+
+                    <div class="media-query-two-inputs">
+                        <div class="input-e-label">
+                            <label for="number">Número</label>
+                            <input class="form-input" type="text" id="number" required placeholder="">
+                        </div>
+
+                        <div class="input-e-label">
+                            <label for="district">Bairro</label>
+                            <input class="form-input" type="text" id="district" required placeholder="" readonly>
+                        </div>
+                    </div>
+
+                    <div class="media-query-two-inputs">
+                        <div class="input-e-label">
+                            <label for="city">Cidade</label>
+                            <input class="form-input" type="text" id="city" required placeholder="" readonly>
+                        </div>
+
+                        <div class="input-e-label">
+                            <label for="state">Estado</label>
+                            <input class="form-input" type="text" id="state" required placeholder="" readonly>
+                        </div>
+                    </div>
+
+                    <div class="container-btn-register">
+                        <button id="submit" class="btn-submit">Registrar</button>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <dialog id="modal" class="modal">
+        <div class="container-modal">
+            <h2>Obrigado por se cadastrar!</h2>
+            <button class="btn-close">OK</button>
+        </div>
+    </dialog>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
