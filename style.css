@@ -11,13 +11,13 @@
 
 body {
     color: #9397b2;
+    background-image: linear-gradient(185deg, #1c2541 50%, #0b132b 50%, #1c2541);
+    min-height: 100vh;
     font-family: 'Rubik', sans-serif;
 }
 
 main {
     padding: .6em;
-    min-height: 100vh;
-    background-image: linear-gradient(185deg, #1c2541 50%, #0b132b 50%, #1c2541);
     display: flex;
 }
 
@@ -175,17 +175,15 @@ button:focus {
     border: 2px solid red;
 }
 
-
+.attribution {
+    text-align: center;
+}
 
 @media(min-width: 760px) {
     body {
         font-size: 1.3rem;
     }
 
-    /* main {
-        padding: 0;
-    }
-     */
     .container {
         max-width: 1500px;
         margin: auto;
